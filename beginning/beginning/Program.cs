@@ -12,17 +12,14 @@ namespace beginning
         static void Main(string[] args)
         {
             //Number1
-            Console.WriteLine("please enter a deciaml number: ");
-            decimal entered_number1 = Convert.ToDecimal(Console.ReadLine());
+            Console.WriteLine("please enter some text: ");
+            string entered_text = Console.ReadLine();
 
-            //Number2
-            Console.WriteLine("Please enter a second decimal number: ");
-            decimal entered_number2 = Convert.ToDecimal(Console.ReadLine());
-
-            decimal sum = entered_number1 + entered_number2;
+            string filled_text = entered_text.PadLeft(20,'Y');
 
             Console.Clear();
-            Console.WriteLine("The sum of the 2 numbers you entered is: " + sum);
+            Console.WriteLine(filled_text);
+            
 
             Console.ReadLine();
             
