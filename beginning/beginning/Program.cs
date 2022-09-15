@@ -13,20 +13,12 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            int i = 0;
-            do
+            string entry = "This is a text containing words";
+            string[] entries = entry.Split(' ');
+            foreach (string entry2 in entries)
             {
-                Console.WriteLine(i);
-                i++;
-
-            } while (i < 10);
-
-            while (i < 10)
-            {
-                Console.WriteLine(i);
-                i++;
+                Console.WriteLine(entry2);
             }
-
             
             Console.ReadLine();
         }
