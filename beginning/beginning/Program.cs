@@ -15,10 +15,9 @@ namespace beginning
         {
             Console.WriteLine("Enter a random Word: ");
             string word = Console.ReadLine();
-            string trimmed_word = word.Trim(' ', 'a');
-
-            Console.WriteLine("Old String" + word + ":");
-            Console.WriteLine("New String " + trimmed_word + ":");
+            string substring_word = word.Substring(3, 4);
+;           Console.WriteLine("old word: " + word);
+            Console.WriteLine("new word: " + substring_word);  
 
             Console.ReadLine();
         }
