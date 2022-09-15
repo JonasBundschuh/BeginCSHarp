@@ -14,11 +14,14 @@ namespace beginning
 
             Console.WriteLine("please enter some text: ");
             string entered_text = Console.ReadLine();
-            string[] modiefied_text = entered_text.Split(';');
-
-            foreach (string modified in modiefied_text)
+            Console.Clear();
+            if (entered_text == "abc")
             {
-                Console.WriteLine(modified);
+                Console.WriteLine("True");
+            }
+            else
+            {
+                Console.WriteLine("False");
             }
 
 
