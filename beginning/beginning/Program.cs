@@ -12,11 +12,16 @@ namespace beginning
         static void Main(string[] args)
         {
 
-            Console.WriteLine("please enter some text: ");
-            string entered_text = Console.ReadLine();
-            bool capital_text = entered_text.Contains("abc");
-            Console.Clear();
-            Console.WriteLine(capital_text);
+            Console.WriteLine("please enter a number: ");
+            int entered_number = Convert.ToInt32(Console.ReadLine());
+            int add = 0;
+            for (int i = 0; i <= entered_number; i++)
+            {
+                Console.WriteLine($"Current Number: {i}");
+                add = add + i;
+                Console.WriteLine($"Added Number: {add}");
+            }
+            
             
 
 
