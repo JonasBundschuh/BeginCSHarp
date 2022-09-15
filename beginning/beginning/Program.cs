@@ -13,11 +13,12 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 99999999; i++)
+            int i = 1;
+            while(i< 10)
             {
                 Console.WriteLine(i);
+                i++;
             }
-
             Console.ReadLine();
         }
     }
