@@ -15,8 +15,10 @@ namespace beginning
         {
             Console.WriteLine("Enter a random Word: ");
             string word = Console.ReadLine();
-            string replaced_word = word.Replace("Umd", "Gmc").Replace("u", "g");
-            Console.WriteLine("the new text is: " + replaced_word);
+            string trimmed_word = word.Trim(' ', 'a');
+
+            Console.WriteLine("Old String" + word + ":");
+            Console.WriteLine("New String " + trimmed_word + ":");
 
             Console.ReadLine();
         }
