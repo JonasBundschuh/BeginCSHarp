@@ -10,24 +10,15 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            //name
-            Console.WriteLine("Username: ");
-            string userName = Console.ReadLine();
-            Console.WriteLine("Hello " + userName);
-
-            //age
-            Console.WriteLine("What is your age right now: ");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Youre: " + age + " years old.");
-
-            //futureAge and Sum. Introduction
-            Console.WriteLine("How old are you in X years? ");
-            int nextYear = Convert.ToInt32(Console.ReadLine()); 
-            int sumYears = age + nextYear;
-            Console.WriteLine("In " + nextYear + " Years you will be " + sumYears);
+            Console.WriteLine("What is yoir height? ");
+            decimal height = Convert.ToDecimal(Console.ReadLine());
+            decimal multiplicator = 3;
+            Console.WriteLine("Youre " + height * multiplicator + " high");
 
 
             Console.ReadKey();
         }
     }
 }
+
+
