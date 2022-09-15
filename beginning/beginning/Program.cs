@@ -14,15 +14,10 @@ namespace beginning
 
             Console.WriteLine("please enter some text: ");
             string entered_text = Console.ReadLine();
+            bool capital_text = entered_text.Contains("abc");
             Console.Clear();
-            if (entered_text == "abc")
-            {
-                Console.WriteLine("True");
-            }
-            else
-            {
-                Console.WriteLine("False");
-            }
+            Console.WriteLine(capital_text);
+            
 
 
             Console.ReadLine();
