@@ -16,12 +16,18 @@ namespace beginning
             Console.WriteLine("Hello " + userName);
 
             //age
-            Console.WriteLine("What is your age: ");
+            Console.WriteLine("What is your age right now: ");
             int age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Youre: " + age + " years old.");
 
+            //futureAge and Sum. Introduction
+            Console.WriteLine("How old are you in X years? ");
+            int nextYear = Convert.ToInt32(Console.ReadLine()); 
+            int sumYears = age + nextYear;
+            Console.WriteLine("In " + nextYear + " Years you will be " + sumYears);
 
-            Console.ReadLine();
+
+            Console.ReadKey();
         }
     }
 }
