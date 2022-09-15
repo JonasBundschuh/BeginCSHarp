@@ -12,23 +12,22 @@ namespace beginning
         static void Main(string[] args)
         {
 
-            Console.WriteLine("please enter a number: ");
-            int entered_number = Convert.ToInt32(Console.ReadLine());
-            int add = 0;
-            for (int i = 0; i <= entered_number; i++)
             {
-                Console.WriteLine($"Current Number: {i}");
-                add = add + i;
-                Console.WriteLine($"Added Number: {add}");
+                Console.WriteLine("Enter your Number: ");
+                int numberOne = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+
+                while (numberOne > 0)
+                {
+                    numberOne--;
+                    Console.WriteLine(numberOne);
+
+                }
+
+                Console.ReadKey();
             }
-            
-            
 
-
-            Console.ReadLine();
-
-
-        }
+        }   
     }
 }
 
