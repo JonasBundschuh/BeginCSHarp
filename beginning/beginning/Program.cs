@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-
-
-//comment
 
 namespace beginning
 {
@@ -13,19 +11,22 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            string entry = "This is a text containing words";
-            string[] entries = entry.Split(' ');
-            foreach (string entry2 in entries)
-            {
-                Console.WriteLine(entry2);
-            }
+            //NumberOne
+            Console.WriteLine("Nenne die erste Zahl: ");
+            int NumberOne = Convert.ToInt32(Console.ReadLine());
 
-            for(int i= 0; i< entries.Length; i++)
-            {
-                Console.WriteLine(entries[i]);
-            }
-            
+            //NumberTwo
+            Console.WriteLine("Nenne die zweite Zahl: ");
+            int NumberTwo = Convert.ToInt32(Console.ReadLine());
+
+            //sum
+            int Numbersum = (NumberOne + NumberTwo);
+            Console.Clear();
+            Console.WriteLine(NumberOne + " + " + NumberTwo + " = " +Numbersum);
+
             Console.ReadLine();
+            
+            
         }
     }
 }
