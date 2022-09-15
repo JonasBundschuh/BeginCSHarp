@@ -15,10 +15,10 @@ namespace beginning
             Console.WriteLine("please enter some text: ");
             string entered_text = Console.ReadLine();
 
-            string filled_text = entered_text.PadRight(30,'Y');
+            string modiefied_text = entered_text.Trim(' ');
 
             Console.Clear();
-            Console.WriteLine(filled_text);
+            Console.WriteLine(modiefied_text);
             
 
             Console.ReadLine();
