@@ -14,11 +14,11 @@ namespace beginning
             //GetText
             Console.WriteLine("please enter some text: ");
             string Text = Console.ReadLine();
-            string replaced_text = Text.Replace('U', 'G').Replace('u', 'g');
+            int TextLenght = Text.Length;
 
             Console.Clear();
-            Console.WriteLine("Original Text: " + Text);
-            Console.WriteLine("Replaced Text: " + replaced_text);
+            Console.WriteLine("The original text was: " + Text);
+            Console.WriteLine("The length of the entered text is: " + TextLenght);
 
             Console.ReadLine();
             
