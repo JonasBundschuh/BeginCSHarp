@@ -11,14 +11,18 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            //GetText
-            Console.WriteLine("please enter some text: ");
-            string Text = Console.ReadLine();
-            int TextLenght = Text.Length;
+            //Number1
+            Console.WriteLine("please enter a deciaml number: ");
+            decimal entered_number1 = Convert.ToDecimal(Console.ReadLine());
+
+            //Number2
+            Console.WriteLine("Please enter a second decimal number: ");
+            decimal entered_number2 = Convert.ToDecimal(Console.ReadLine());
+
+            decimal sum = entered_number1 + entered_number2;
 
             Console.Clear();
-            Console.WriteLine("The original text was: " + Text);
-            Console.WriteLine("The length of the entered text is: " + TextLenght);
+            Console.WriteLine("The sum of the 2 numbers you entered is: " + sum);
 
             Console.ReadLine();
             
