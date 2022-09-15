@@ -11,19 +11,20 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            //Number1
+
             Console.WriteLine("please enter some text: ");
             string entered_text = Console.ReadLine();
+            string[] modiefied_text = entered_text.Split(';');
 
-            string modiefied_text = entered_text.Trim(' ');
+            foreach (string modified in modiefied_text)
+            {
+                Console.WriteLine(modified);
+            }
 
-            Console.Clear();
-            Console.WriteLine(modiefied_text);
-            
 
             Console.ReadLine();
-            
-            
+
+
         }
     }
 }
