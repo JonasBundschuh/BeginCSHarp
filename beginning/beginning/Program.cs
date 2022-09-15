@@ -10,10 +10,17 @@ namespace beginning
     {
         static void Main(string[] args)
         {
+            //name
             Console.WriteLine("Username: ");
-            string Username = Console.ReadLine();
-            Console.WriteLine("Hello "
-                              + Username);
+            string userName = Console.ReadLine();
+            Console.WriteLine("Hello " + userName);
+
+            //age
+            Console.WriteLine("What is your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Youre: " + age + " years old.");
+
+
             Console.ReadLine();
         }
     }
