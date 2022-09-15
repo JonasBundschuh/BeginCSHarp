@@ -19,6 +19,11 @@ namespace beginning
             {
                 Console.WriteLine(entry2);
             }
+
+            for(int i= 0; i< entries.Length; i++)
+            {
+                Console.WriteLine(entries[i]);
+            }
             
             Console.ReadLine();
         }
