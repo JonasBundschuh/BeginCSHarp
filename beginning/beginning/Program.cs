@@ -16,10 +16,19 @@ namespace beginning
             if(age < 18)
             {
                 Console.WriteLine("Youre underaged.");
+                
             }
-            else {
-                Console.WriteLine("have fun");
-                 }
+            else 
+            {
+                if (age < 28)
+                {
+                    Console.WriteLine("pleas enter your ID: ");
+                }
+                else
+                {
+                    Console.WriteLine("Welcome!");
+                }
+             }
 
 
             Console.ReadKey();
