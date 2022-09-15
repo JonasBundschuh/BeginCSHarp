@@ -11,18 +11,14 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            //NumberOne
-            Console.WriteLine("Nenne die erste Zahl: ");
-            int NumberOne = Convert.ToInt32(Console.ReadLine());
+            //GetText
+            Console.WriteLine("please enter some text: ");
+            string Text = Console.ReadLine();
+            string replaced_text = Text.Replace('U', 'G').Replace('u', 'g');
 
-            //NumberTwo
-            Console.WriteLine("Nenne die zweite Zahl: ");
-            int NumberTwo = Convert.ToInt32(Console.ReadLine());
-
-            //sum
-            int Numbersum = (NumberOne + NumberTwo);
             Console.Clear();
-            Console.WriteLine(NumberOne + " + " + NumberTwo + " = " +Numbersum);
+            Console.WriteLine("Original Text: " + Text);
+            Console.WriteLine("Replaced Text: " + replaced_text);
 
             Console.ReadLine();
             
