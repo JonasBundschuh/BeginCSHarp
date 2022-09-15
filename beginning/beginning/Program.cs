@@ -15,7 +15,7 @@ namespace beginning
             Console.WriteLine("please enter some text: ");
             string entered_text = Console.ReadLine();
 
-            string filled_text = entered_text.PadLeft(20,'Y');
+            string filled_text = entered_text.PadRight(30,'Y');
 
             Console.Clear();
             Console.WriteLine(filled_text);
