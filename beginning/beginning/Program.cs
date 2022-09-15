@@ -13,28 +13,12 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is your age?");
-            int age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a random Word: ");
+            string word = Console.ReadLine();
+            string replaced_word = word.Replace("Umd", "Gmc").Replace("u", "g");
+            Console.WriteLine("the new text is: " + replaced_word);
 
-            if(age < 18)
-            {
-                Console.WriteLine("Youre underaged.");
-                
-            }
-            else 
-            {
-                if (age < 28)
-                {
-                    Console.WriteLine("pleas enter your ID: ");
-                }
-                else
-                {
-                    Console.WriteLine("Welcome!");
-                }
-             }
-
-
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }
