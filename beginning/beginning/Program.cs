@@ -10,10 +10,16 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What is yoir height? ");
-            decimal height = Convert.ToDecimal(Console.ReadLine());
-            decimal multiplicator = 3;
-            Console.WriteLine("Youre " + height * multiplicator + " high");
+            Console.WriteLine("What is your age?");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            if(age < 18)
+            {
+                Console.WriteLine("Youre underaged.");
+            }
+            else {
+                Console.WriteLine("have fun");
+                 }
 
 
             Console.ReadKey();
