@@ -16,54 +16,103 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>();
-            list.Add(5);
-            list.Add(3);
-            list.Add(7);
+            //---------------RANDOM---------------
+            Random rnd = new Random();
+            int k = rnd.Next(0,36);
+            Console.WriteLine($"The Number is: {k}");
 
-           
+            //---------------CASH---------------
+            int entry = 10;
+            int balance = 10000;
+            int PlusBalance = balance + entry;
+            int MinusBalance = balance - entry;
 
-            Console.WriteLine("-----");
-            Console.Write("Do you want to add more numbers to the list? ");
-            string userAgree = Console.ReadLine();
-            Console.Clear();
-            bool continue_list = userAgree == "yes" == true;
-            int userNumber = 0;
-            do
+            //---------------BOOLS---------------
+            bool winDouble;
+            bool win0;
+            bool generalWIN;
+            bool loseEntry;
+
+            if (generalWIN = true)
             {
-                Console.WriteLine("What number would you like to add?: ");
-                string user_eingabe = Console.ReadLine();
-                if(user_eingabe == string.Empty)
-                {
-                    continue_list = false;
-                }
-                else
-                {
-                    userNumber = Convert.ToInt32(user_eingabe);
-                    list.Add(userNumber);
-                }                
-            } while (continue_list == true);
+                
+                balance = balance + entry;
+                entry = entry = 10;
 
-            Console.Clear();
-            Console.WriteLine("-----");
-
-            for (int i = 0; i < list.Count; i++)
+            }
+            else if (loseEntry = true)
             {
+                balance = balance - entry;
+                entry = entry * 2;
+            }
 
-                Console.WriteLine(list[i]);
+
+            //---------------BALANCE CHANGE---------------
+            if (balance < 10000)
+            {
+                entry = entry * 2;
+            }
+            else
+            {
+                entry = entry / 2;
+            }
+
+            
+
+            //---------------WIN / LOSE---------------
+            if (k % 2 == 0 && k != 0)
+            {
+                //$20
+                winDouble = true;
+                generalWIN = true;
+            }
+            else if (k % 2 == 0 && k != 1)
+            {
+                //-$10
+                loseEntry = false;
+                generalWIN = false;
+
+            }
+            else if (k == 0)
+            {
+                //$10
+                win0 = true;
 
             }
 
 
+            //---------------WIN---------------
+            if (generalWIN = true)
+            {
+                Console.WriteLine("YOU WIN!");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine($"Your entry was: {entry}");
+                Console.WriteLine($"Your new balance = {PlusBalance}");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Press Enter to play again!");
+
+            }else if(win0 = true)
+            {
+                Console.WriteLine("YOU WIN NOTHING");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine($"Your entry was: {entry}");
+                Console.WriteLine($"Your new balance = {balance}");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Press Enter to play again!");
+            }
+            else
+            {
+                Console.WriteLine("YOU LOSE!");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine($"Your entry was: {entry}");
+                Console.WriteLine($"Your new balance = {MinusBalance}");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Press Enter to play again!");
+            }
             Console.ReadLine();
-
-
-
-
-
-
-
         }
+
+       
     }   
 }
 
