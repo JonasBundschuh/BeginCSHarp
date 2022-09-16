@@ -13,54 +13,30 @@ namespace beginning
     {
         static void Main(string[] args)
         {
+                
+            List<string> namen = new List<string>();
             
-            //Get user Input + Definitions
-            Console.WriteLine("Please enter your first number: ");
-            int numberOne = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Please enter your second number: ");
-            int numberTwo = Convert.ToInt32((Console.ReadLine()));
-
-            Console.WriteLine("Please enter your Operator: ");
-            string entered_operator = Console.ReadLine();
-            Console.Clear();
+            //Console.WriteLine("Enter a name: ");
+            Console.WriteLine("How many names do you want in the List?: ");
+            int numberOfNames = Convert.ToInt32(Console.ReadLine());
 
 
-            //math
-            switch(entered_operator)
+            for (int i = 0; i < numberOfNames; i++)
             {
-                case "+":
-                    float plus_equals = numberOne + numberTwo;
-                    Console.Clear();
-                    Console.WriteLine($"{numberOne} + {numberTwo} = {plus_equals}");
-                    break;
+                Console.WriteLine("Please enter a name to add to the list: ");
+                string name = Console.ReadLine();
+                namen.Add(name);
 
-                case "-":
-                    float minus_equals = numberOne - numberTwo;
-                    Console.Clear();
-                    Console.WriteLine($"{numberOne} - {numberTwo} = {minus_equals}");
-                    break;
-
-                case "*":
-                    float mult_equals = numberOne * numberTwo;
-                    Console.Clear();
-                    Console.WriteLine($"{numberOne} * {numberTwo} = {mult_equals}");
-                    break;
-
-                case "/":
-                    float divide_equals = numberOne / numberTwo;
-                    Console.Clear();
-                    Console.WriteLine($"{numberOne} / {numberTwo} = {divide_equals}");
-                    break;
             }
-
-
-
+            foreach (string name in namen)
+            {
+                Console.Clear();
+                Console.WriteLine(name);
+            }
+         
             Console.ReadKey();
-
-
-
         }
+        
     }
 }
 
