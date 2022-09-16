@@ -13,27 +13,27 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            //get searchValue
-            Console.WriteLine("Please enter a character you want to search for: ");
-            char searchValue = Convert.ToChar(Console.ReadLine());
-            Console.Clear();
+            int[] numbers = new int[5];
 
-            //List of names
-            string[] names = { "Jonas", "Phillip", "Niklas", "Marcello", "Andreas", "Robin", "Robert", "Marie", "Leon", "Erwin", "Jan", "Mona", "Lukas", "Johannes" };
-            
-            //Loop
-            foreach(string name in names)
+            int[] numbers2 = new int[] { 26, 8, 12, 3, 6 };
+
+            for(int i = 0; i < numbers.Length; i++)
             {
-
-                //if name on list contains searchValue print name
-                bool valid_name = name.Contains(searchValue);
-                if(valid_name.Equals(true))
-                {
-                    Console.WriteLine(name);
-                }
+                Console.WriteLine("Give me a number for the array: ");
+                numbers[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            Console.Write("[ ");
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write($"{numbers[i]} | ");
+            }
+            Console.Write(" ]");
+
             Console.ReadLine();
 
+            
 
         }   
     }
