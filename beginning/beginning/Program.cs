@@ -13,28 +13,75 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-                
-            List<string> namen = new List<string>();
-            
-            //Console.WriteLine("Enter a name: ");
-            Console.WriteLine("How many names do you want in the List?: ");
-            int numberOfNames = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("please enter your first number: ");
+            int z1 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("please enter your second number: ");
+            int z2 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("Please enter your operator: ");
+            string chosen_operator = Console.ReadLine(); 
 
 
-            for (int i = 0; i < numberOfNames; i++)
-            {
-                Console.WriteLine("Please enter a name to add to the list: ");
-                string name = Console.ReadLine();
-                namen.Add(name);
+            int Add_ergebnis = Add(z1, z2);
+            int minus_ergebnis = Minus(z1, z2);
+            float divide_ergebnis = divide(z1, z2);
+            float multi_ergebnis = multi(z1, z2);
 
-            }
-            foreach (string name in namen)
+            if(chosen_operator == "+")
             {
                 Console.Clear();
-                Console.WriteLine(name);
+                Console.WriteLine($"{z1} + {z2} = {Add_ergebnis}");
             }
-         
+            else if(chosen_operator == "-")
+            {
+                Console.Clear();
+                Console.WriteLine($"{z1} - {z2} = {minus_ergebnis}");
+            }
+            else if(chosen_operator == "/")
+            {
+                Console.Clear();
+                Console.WriteLine($"{z1} / {z2} = {divide_ergebnis}");
+            }
+            else if(chosen_operator == "*")
+            {
+                Console.Clear();
+                Console.WriteLine($"{z1} * {z2} = {multi_ergebnis}");
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Invalid Operator!");
+            }
+            //Console.WriteLine(/*/t*/);
+
             Console.ReadKey();
+            
+        }
+
+        static int Add(int z1, int z2)
+        {
+            int sum = z1 + z2;
+            return sum;
+        }
+
+        static int Minus(int z1, int z2)
+        {
+            int m = z1 - z2;
+            return m;
+        }
+
+        static int divide(int z1, int z2)
+        {
+            int d = z1 / z2;
+            return d;
+        }
+
+        static float multi(int z1, int z2)
+        {
+            int u = z1 * z2;
+            return u;
         }
         
     }
