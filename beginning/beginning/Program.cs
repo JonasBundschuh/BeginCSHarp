@@ -13,23 +13,13 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            int[] numbers = new int[5];
+            string[] names = new string[13];
+            string[] names2 = new string[] { "Lukas", "Jonas", "Mona", "Marie", "Philip", "Jan", "Erwin", "Leon", "Marcello", "Johannes", "Robin", "Andreas", "Robert" };
 
-            int[] numbers2 = new int[] { 26, 8, 12, 3, 6 };
-
-            for(int i = 0; i < numbers.Length; i++)
+            foreach(string trainee in names2)
             {
-                Console.WriteLine("Give me a number for the array: ");
-                numbers[i] = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine(trainee);
             }
-
-            Console.Write("[ ");
-
-            for (int i = 0; i < numbers.Length; i++)
-            {
-                Console.Write($"{numbers[i]} | ");
-            }
-            Console.Write(" ]");
 
             Console.ReadLine();
 
