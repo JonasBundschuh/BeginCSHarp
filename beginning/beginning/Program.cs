@@ -13,46 +13,54 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-
             
-         
-            //get numbers from user input
-            for (int i = 1; i < 101; i++)
-            {
-                if (i % 3 == 0 && i % 5 == 0)
-                {
-                    Console.WriteLine("FizzBuzz");
+            //Get user Input + Definitions
+            Console.WriteLine("Please enter your first number: ");
+            int numberOne = Convert.ToInt32(Console.ReadLine());
 
-                } else if (i % 5 == 0)
-                {
-                    Console.WriteLine("Buzz");
-                } 
-                else if (i % 3 == 0)
-                {
-                Console.WriteLine("Fizz");
-                }
-                else
-                {
-                    Console.WriteLine(i);
-                }
+            Console.WriteLine("Please enter your second number: ");
+            int numberTwo = Convert.ToInt32((Console.ReadLine()));
+
+            Console.WriteLine("Please enter your Operator: ");
+            string entered_operator = Console.ReadLine();
+            Console.Clear();
+
+
+            //math
+            switch(entered_operator)
+            {
+                case "+":
+                    float plus_equals = numberOne + numberTwo;
+                    Console.Clear();
+                    Console.WriteLine($"{numberOne} + {numberTwo} = {plus_equals}");
+                    break;
+
+                case "-":
+                    float minus_equals = numberOne - numberTwo;
+                    Console.Clear();
+                    Console.WriteLine($"{numberOne} - {numberTwo} = {minus_equals}");
+                    break;
+
+                case "*":
+                    float mult_equals = numberOne * numberTwo;
+                    Console.Clear();
+                    Console.WriteLine($"{numberOne} * {numberTwo} = {mult_equals}");
+                    break;
+
+                case "/":
+                    float divide_equals = numberOne / numberTwo;
+                    Console.Clear();
+                    Console.WriteLine($"{numberOne} / {numberTwo} = {divide_equals}");
+                    break;
             }
 
-            Console.ReadLine();
 
-           // //print the numbers
-           // for (int i = 0; i < numbers.Length; i++)
-           // {
-           //     Console.Clear();
-           //
-           //     Console.WriteLine($"Lowest Number: {numbers.Min()} ");
-           //     Console.WriteLine($"Highest Number: {numbers.Max()}");
-           //     Console.WriteLine($"Averge: {numbers.Average()}");
-           // }
-           // Console.ReadLine();
 
-            
+            Console.ReadKey();
 
-        }   
+
+
+        }
     }
 }
 
