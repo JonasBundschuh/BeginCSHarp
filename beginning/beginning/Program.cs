@@ -6,42 +6,20 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace beginning
 {
-    internal class Program
+    internal class Program 
     {
         static void Main(string[] args)
         {
-
-            Dreieck d = new Dreieck(2, 4, 10);
-
-            Circle c = new Circle(5);
-            c.Radius = 5;            
-
-            Rechteck r = new Rechteck(10, 20);
+            
+            List<Animals> animals = new List<Animals>();
+            animals.Add(new Tiger("Tiger", "Raubtier", 12, 50, 15, 80, true, false, false, "ROOOAAAR" ));
            
-
-            List<IGeometry> geometries = new List<IGeometry>();
-            geometries.Add(d);
-            geometries.Add(c);
-            geometries.Add(r);
-
-            foreach(IGeometry g in geometries)
+            foreach(var animal in animals)
             {
-                Console.WriteLine($"mein {d.GetType().Name} hat eine fläche von {g.Flaeche()} und einen Umfang von {g.Umfang()}");
+                animal.PrintAnimal();
+                animal.Geraeusche();
             }
 
-            List <Vehicle> fahrzeuge = new List<Vehicle>();
-            fahrzeuge.Add(new Motorcycle(532, "BMW", "GSXR 2000", "3.0", 3000, "Blau", 2));
-            fahrzeuge.Add(new Car(123, "VW", "Golf V", "2.0 TDI", 1900, "Rot", 4));
-
-            foreach(Vehicle v in fahrzeuge)
-            {
-                v.Starten();
-                v.Beschleunigen();
-                v.Bremsen();
-                v.Starten();
-                v.Bremsen();
-                v.Bremsen();
-            }
 
 
             Console.ReadLine();

@@ -11,11 +11,8 @@ namespace beginning
         public int Seite1;
         public int Seite2;
 
-        public Rechteck(int seite1, int seite2)
-        {
-            Seite1 = seite1;
-            Seite2 = seite2;
-        }
+        //public Rechteck();
+
 
         public float Flaeche()
         {
