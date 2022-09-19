@@ -1,5 +1,8 @@
 ﻿using System;
-
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace beginning
 {
@@ -7,99 +10,47 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            //---------------RANDOM---------------
-            Random rnd = new Random();
-            int k = rnd.Next(0, 36);
-            Console.WriteLine($"The Number is: {k}");
 
-            //---------------CASH---------------
-            int entry = 10;
-            int balance = 10000;
-            int PlusBalance = balance + entry;
-            int MinusBalance = balance - entry;
+            Console.WriteLine("How many cars would u like to add?: ");
+            int AmountCars = Convert.ToInt32(Console.ReadLine());
 
-            //---------------BOOLS---------------
-            bool winDouble;
-            bool win0;
-            bool generalWIN;
-            bool loseEntry;
+            List<Car> cars = new List<Car>();
 
-            if (generalWIN = true)
+            for (int i = 0; i < AmountCars; i++)
             {
+                Console.WriteLine("What TypeID do you want the car to have?: ");
+                int vehicleID = Convert.ToInt32(Console.ReadLine());
 
-                balance = balance + entry;
-                entry = entry = 10;
+                Console.WriteLine("What brand do you want the car to be off?: ");
+                string vehicleMake = Console.ReadLine();
 
-            }
-            else if (loseEntry = true)
-            {
-                balance = balance - entry;
-                entry = entry * 2;
-            }
-            else if (winDouble = true)
-            {
-                entry = entry * 2;
-                balance = balance + entry;
-            }
-            else if  (win0 = true)
-            {
-                balance = balance;
+                Console.WriteLine("What model do you want the car to be?: ");
+                string vehicleModel = Console.ReadLine();
+
+                Console.WriteLine("What type do you want the car to be?: ");
+                string vehicleType = Console.ReadLine();
+
+                Console.WriteLine("How much ccm do you want the car to have?: ");
+                int vehicleCmm = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("How many tyres do you want the car to have?:");
+                int vehicleTyres = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("What color do you want the car to be?: ");
+                string vehicleColor = Console.ReadLine();
+
+                Console.Clear();
+
+                cars.Add(new Car(vehicleID, vehicleType, vehicleMake, vehicleModel, vehicleCmm, vehicleTyres, vehicleColor));
             }
 
-
-
-
-            //---------------BALANCE CHANGE---------------
-            if (balance < 10000)
+            foreach (Car car in cars)
             {
-                entry = entry * 2;
-            }
-            else
-            {
-                entry = entry / 2;
+                car.PrintCarInformation();
             }
 
-
-
-            //---------------WIN / LOSE---------------
-            if (k % 2 == 0 && k != 0)
-            {
-                //$20
-                balance = balance + 20;
-                generalWIN = true;
-                Console.WriteLine("YOU WIN!");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine($"Your entry was: {entry}");
-                Console.WriteLine($"Your new balance = {PlusBalance}");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine("Press Enter to play again!");
-            }
-            else if (k % 2 == 0 && k != 1)
-            {
-                //-$10
-                loseEntry = false;
-                generalWIN = false;
-
-                Console.WriteLine("YOU WIN NOTHING");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine($"Your entry was: {entry}");
-                Console.WriteLine($"Your new balance = {balance}");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine("Press Enter to play again!");
-
-            }
-            else if (k == 0)
-            {
-                //$10
-                win0 = true;
-                Console.WriteLine("YOU LOSE!");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine($"Your entry was: {entry}");
-                Console.WriteLine($"Your new balance = {MinusBalance}");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine("Press Enter to play again!");
-            }
             Console.ReadKey();
+
         }
     }
 }
