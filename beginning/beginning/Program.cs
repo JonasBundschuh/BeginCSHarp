@@ -11,55 +11,40 @@ namespace beginning
         static void Main(string[] args)
         {
 
-            Console.WriteLine("How many houses would u like to add?: ");
-            int AmountHouses = Convert.ToInt32(Console.ReadLine());
+            Dreieck d = new Dreieck(2, 4, 10);
 
-            Console.Clear();
+            Circle c = new Circle(5);
+            c.Radius = 5;            
 
+            Rechteck r = new Rechteck(10, 20);
+           
 
-            List<House> Houses = new List<House>();
+            List<IGeometry> geometries = new List<IGeometry>();
+            geometries.Add(d);
+            geometries.Add(c);
+            geometries.Add(r);
 
-            for (int i = 0; i < AmountHouses; i++)
+            foreach(IGeometry g in geometries)
             {
-                
-                Console.WriteLine("How long do you want your house to be?: ");
-                double houselength = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine("how thic do you want the house to be?: ");
-                double houseThic = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine("How high do you want your house to be?: ");
-                double houseHeight = Convert.ToDouble(Console.ReadLine());
-
-                Console.WriteLine("What kind of roof do you want the house to have?: ");
-                string houseRoof = Console.ReadLine();
-
-                Console.WriteLine("What color do you want the house to have?: ");
-                string houseColor = Console.ReadLine();  
-                
-                Console.WriteLine("How many floors do you want the house to have?: ");
-                int houseFloors = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("How much does the house cost?: ");
-                double housePrice = Convert.ToDouble(Console.ReadLine());
-
-                Console.Clear();
-
-                double houseArea = houselength * houseThic;
-
-                Houses.Add(new House(houselength, houseThic, houseHeight, houseRoof,houseColor, houseFloors, housePrice, houseArea));
-
+                Console.WriteLine($"mein {d.GetType().Name} hat eine fläche von {g.Flaeche()} und einen Umfang von {g.Umfang()}");
             }
 
-            
+            List <Vehicle> fahrzeuge = new List<Vehicle>();
+            fahrzeuge.Add(new Motorcycle(532, "BMW", "GSXR 2000", "3.0", 3000, "Blau", 2));
+            fahrzeuge.Add(new Car(123, "VW", "Golf V", "2.0 TDI", 1900, "Rot", 4));
 
-            foreach (House house in Houses)
+            foreach(Vehicle v in fahrzeuge)
             {
-                house.PrintHouses();
+                v.Starten();
+                v.Beschleunigen();
+                v.Bremsen();
+                v.Starten();
+                v.Bremsen();
+                v.Bremsen();
             }
-            
 
-            Console.ReadKey();
+
+            Console.ReadLine();
 
         }
     }
