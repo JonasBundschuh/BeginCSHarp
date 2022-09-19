@@ -8,35 +8,38 @@ using System.Threading.Tasks;
 
 namespace beginning
 {
-    public class Car
+    public class House
     {
-        public int TypeId { get; set; }
-        public string make { get; set; }
-        public string model { get; set; }
-        public string TypeName { get; set; }
-        public int ccm { get; set; }
-        public int TyreAmount { get; set; }
+        public double length { get; set; }
+        public double thicness { get; set; }
+        public double height { get; set; }
+        public string roof { get; set; }
         public string color { get; set; }
+        public int floors { get; set; }
+        public double price { get; set; }
+        public double area { get; set; }
 
 
-        public Car(int typeId, string make, string model, string typeName, int ccm, int tyreAmount, string color)
+      public House(double length, double thicness, double height, string roof, string color, int floors, double price, double area)
         {
-            TypeId = typeId;
-            this.make = make;
-            this.model = model;
-            TypeName = typeName;
-            this.ccm = ccm;
-            TyreAmount = tyreAmount;
+            this.length = length;
+
+
+            this.thicness = thicness;
+            this.height = height;
+            this.roof = roof;
             this.color = color;
+            this.floors = floors;
+            this.price = price;
+            this.area = area;
         }
 
-        public void PrintCarInformation()
-
+        public void PrintHouses()
         {
-            Console.WriteLine($"Car with the Type ID {TypeId}, made by {make} as model {model} with the Type {TypeName} and a CCM of {ccm}. It has a tire amount of {TyreAmount} and the color {color}");
+            Console.WriteLine($"The house has a length of {length}, a thicnes of {thicness}, and a height of {height}.Its on a area of {area}. It has a {roof} roof and its color is {color} and it has {floors} floors. The house costs ${price}");
         }
 
-
+        
 
     }
 

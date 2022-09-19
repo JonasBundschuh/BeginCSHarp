@@ -11,43 +11,53 @@ namespace beginning
         static void Main(string[] args)
         {
 
-            Console.WriteLine("How many cars would u like to add?: ");
-            int AmountCars = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("How many houses would u like to add?: ");
+            int AmountHouses = Convert.ToInt32(Console.ReadLine());
 
-            List<Car> cars = new List<Car>();
+            Console.Clear();
 
-            for (int i = 0; i < AmountCars; i++)
+
+            List<House> Houses = new List<House>();
+
+            for (int i = 0; i < AmountHouses; i++)
             {
-                Console.WriteLine("What TypeID do you want the car to have?: ");
-                int vehicleID = Convert.ToInt32(Console.ReadLine());
+                
+                Console.WriteLine("How long do you want your house to be?: ");
+                double houselength = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("What brand do you want the car to be off?: ");
-                string vehicleMake = Console.ReadLine();
+                Console.WriteLine("how thic do you want the house to be?: ");
+                double houseThic = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("What model do you want the car to be?: ");
-                string vehicleModel = Console.ReadLine();
+                Console.WriteLine("How high do you want your house to be?: ");
+                double houseHeight = Convert.ToDouble(Console.ReadLine());
 
-                Console.WriteLine("What type do you want the car to be?: ");
-                string vehicleType = Console.ReadLine();
+                Console.WriteLine("What kind of roof do you want the house to have?: ");
+                string houseRoof = Console.ReadLine();
 
-                Console.WriteLine("How much ccm do you want the car to have?: ");
-                int vehicleCmm = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("What color do you want the house to have?: ");
+                string houseColor = Console.ReadLine();  
+                
+                Console.WriteLine("How many floors do you want the house to have?: ");
+                int houseFloors = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine("How many tyres do you want the car to have?:");
-                int vehicleTyres = Convert.ToInt32(Console.ReadLine());
-
-                Console.WriteLine("What color do you want the car to be?: ");
-                string vehicleColor = Console.ReadLine();
+                Console.WriteLine("How much does the house cost?: ");
+                double housePrice = Convert.ToDouble(Console.ReadLine());
 
                 Console.Clear();
 
-                cars.Add(new Car(vehicleID, vehicleType, vehicleMake, vehicleModel, vehicleCmm, vehicleTyres, vehicleColor));
+                double houseArea = houselength * houseThic;
+
+                Houses.Add(new House(houselength, houseThic, houseHeight, houseRoof,houseColor, houseFloors, housePrice, houseArea));
+
             }
 
-            foreach (Car car in cars)
+            
+
+            foreach (House house in Houses)
             {
-                car.PrintCarInformation();
+                house.PrintHouses();
             }
+            
 
             Console.ReadKey();
 
