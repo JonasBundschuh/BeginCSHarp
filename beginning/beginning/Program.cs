@@ -1,13 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Net;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 
 namespace beginning
@@ -18,7 +9,7 @@ namespace beginning
         {
             //---------------RANDOM---------------
             Random rnd = new Random();
-            int k = rnd.Next(0,36);
+            int k = rnd.Next(0, 36);
             Console.WriteLine($"The Number is: {k}");
 
             //---------------CASH---------------
@@ -35,7 +26,7 @@ namespace beginning
 
             if (generalWIN = true)
             {
-                
+
                 balance = balance + entry;
                 entry = entry = 10;
 
@@ -45,6 +36,17 @@ namespace beginning
                 balance = balance - entry;
                 entry = entry * 2;
             }
+            else if (winDouble = true)
+            {
+                entry = entry * 2;
+                balance = balance + entry;
+            }
+            else if  (win0 = true)
+            {
+                balance = balance;
+            }
+
+
 
 
             //---------------BALANCE CHANGE---------------
@@ -57,14 +59,20 @@ namespace beginning
                 entry = entry / 2;
             }
 
-            
+
 
             //---------------WIN / LOSE---------------
             if (k % 2 == 0 && k != 0)
             {
                 //$20
-                winDouble = true;
+                balance = balance + 20;
                 generalWIN = true;
+                Console.WriteLine("YOU WIN!");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine($"Your entry was: {entry}");
+                Console.WriteLine($"Your new balance = {PlusBalance}");
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Press Enter to play again!");
             }
             else if (k % 2 == 0 && k != 1)
             {
@@ -72,36 +80,18 @@ namespace beginning
                 loseEntry = false;
                 generalWIN = false;
 
-            }
-            else if (k == 0)
-            {
-                //$10
-                win0 = true;
-
-            }
-
-
-            //---------------WIN---------------
-            if (generalWIN = true)
-            {
-                Console.WriteLine("YOU WIN!");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine($"Your entry was: {entry}");
-                Console.WriteLine($"Your new balance = {PlusBalance}");
-                Console.WriteLine("------------------------------");
-                Console.WriteLine("Press Enter to play again!");
-
-            }else if(win0 = true)
-            {
                 Console.WriteLine("YOU WIN NOTHING");
                 Console.WriteLine("------------------------------");
                 Console.WriteLine($"Your entry was: {entry}");
                 Console.WriteLine($"Your new balance = {balance}");
                 Console.WriteLine("------------------------------");
                 Console.WriteLine("Press Enter to play again!");
+
             }
-            else
+            else if (k == 0)
             {
+                //$10
+                win0 = true;
                 Console.WriteLine("YOU LOSE!");
                 Console.WriteLine("------------------------------");
                 Console.WriteLine($"Your entry was: {entry}");
@@ -109,10 +99,8 @@ namespace beginning
                 Console.WriteLine("------------------------------");
                 Console.WriteLine("Press Enter to play again!");
             }
-            Console.ReadLine();
+            Console.ReadKey();
         }
-
-       
-    }   
+    }
 }
 
