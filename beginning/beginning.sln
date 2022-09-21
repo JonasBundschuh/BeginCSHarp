@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "beginning", "beginning\beginning.csproj", "{0A6D9EF3-C35A-4559-BBD1-EED3DA9AF167}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filehandling", "Filehandling\Filehandling.csproj", "{09724E88-00D9-4668-845F-473C588801B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0A6D9EF3-C35A-4559-BBD1-EED3DA9AF167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A6D9EF3-C35A-4559-BBD1-EED3DA9AF167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A6D9EF3-C35A-4559-BBD1-EED3DA9AF167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09724E88-00D9-4668-845F-473C588801B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09724E88-00D9-4668-845F-473C588801B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09724E88-00D9-4668-845F-473C588801B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09724E88-00D9-4668-845F-473C588801B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
