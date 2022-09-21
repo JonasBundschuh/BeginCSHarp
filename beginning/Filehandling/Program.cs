@@ -11,48 +11,32 @@ namespace Filehandling
     {
         static void Main(string[] args)
         {
-            int azubiAnzahl = 4;
+            int[] zahlenEinträge = new int[] { 1, 2, 3, 4, 5, 6, };
+            double e2 = Ergebnis(zahlenEinträge);
+            Console.WriteLine(e2);
 
-            List<string> myTrainees = CreateAzubiNameList(azubiAnzahl);
-            List<string> myTraineesWithM = GiveMeTraineesWithM(myTrainees);
-            foreach(string trine in myTraineesWithM) 
-            { 
-                Console.Clear();
-                Console.WriteLine(trine);
-            }
+
             Console.ReadLine();
-
         }
 
-        static List<string> CreateAzubiNameList(int p_azubi)
-        {
-            Console.WriteLine("Gebe die namen der azubis an");
-            List<string> azubiNamen = new List<string>();
-            while (azubiNamen.Count < p_azubi)
-            {
-                azubiNamen.Add(Console.ReadLine());
-            }
 
-            return azubiNamen;
-        }
-
-        static List<string> GiveMeTraineesWithM(List<string> allTrainees)
+        static int Ergebnis(int[] zahlenEinträge)
         {
-            List<string> traineesWithM = new List<string>();
-            foreach (string t in allTrainees)
+
+            int ergebnis = 0;
+            foreach(int i in zahlenEinträge)
             {
-                if (t.StartsWith("m")){
-                    traineesWithM.Add(t);
-                }
+                ergebnis = i + ergebnis;
                 
             }
-            return traineesWithM;
+            return ergebnis;
             
+        } 
 
 
-        }
+        //beide Zaheln addieren und das ergebnis wiedergeben
 
-       
+
     }
-    
+
 }
